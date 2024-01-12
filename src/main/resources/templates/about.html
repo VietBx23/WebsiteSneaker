@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout/layout.html::dynamic(~{::title}, ~{::body})}">
+<head>
+<title>Shoe Galaxy</title>
+<meta charset="utf-8">
+</head>
+<body>
+
+	<section class="py-5" data-aos="fade">
+		<div class="container text-center">
+			<h1>𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓽𝓸 𝓢𝓱𝓸𝓮 𝓖𝓪𝓵𝓪𝔁𝔂</h1>
+			<p>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ɢᴀʟᴀxʏ sʜᴏᴇs ʏᴏᴜʀ ᴏɴᴇ-sᴛᴏᴘ sʜᴏᴘ ғᴏʀ ᴛʜᴇ ʟᴀᴛᴇsᴛ ᴀɴᴅ
+				ɢʀᴇᴀᴛᴇsᴛ sʜᴏᴇs!</p>
+		</div>
+		<div class="container mt-3" data-aos="fade">
+			<div class="row">
+				<div class="col-md-6 mt-5">
+					<h2 class="mt-5">About Us</h2>
+					<br>
+					<p>"SHOE GALAXY - A trusted destination for authentic sneakers
+						since 2023. We take pride in being a top choice for fashion
+						enthusiasts and trendsetters. With a vision for perfection and
+						relentless innovation, we are committed to providing customers
+						with high-quality products that meet every need for aesthetics and
+						comfort. We are not just a store but a community passionate about
+						exploring and expressing style with every step. With each
+						carefully curated pair of shoes, we aim to bring you not just
+						comfort but also confidence and a true sense of self. With a
+						mission to build a community of passion and sharing, we
+						continuously create memorable shopping experiences and dedicated
+						customer care services. From providing accurate and in-depth
+						product information to offering professional advice on style and
+						trends, we always listen and accompany you on the journey to find
+						the perfect pair of shoes. Built on the foundation of passion and
+						a commitment to quality, SHOE GALAXY continually expands and
+						evolves to become a space of creativity and inspiration for the
+						shoe-loving community. We believe that each pair of shoes carries
+						its own story, and every step is an opportunity to showcase your
+						unique style and personality."</p>
+				</div>
+				<div class="col-md-6">
+					<img th:src="@{../../images/about.png}" alt="Image placeholder"
+						class="img-fluid rounded">
+
+				</div>
+			</div>
+
+			<div class="row mt-5" data-aos="fade">
+				<div class="col-sm-12" data-aos="fade">
+					<h2>Famous Shoe Brands</h2>
+					<div class="row mt-3">
+						<div class="col-sm-2 col-md-2 col-6">
+							<img th:src="@{../../images/a1_1.jpg}"
+								style="width: 200px; height: 200px" alt="Product 1"
+								class="img-fluid mb-3">
+							<p class="text-center">Adidas</p>
+						</div>
+						<div class="col-sm-2 col-md-2 col-6">
+							<img th:src="@{../../images/n1_1.jpg}"
+								style="width: 200px; height: 200px" alt="Product 1"
+								class="img-fluid mb-3">
+							<p class="text-center">Nike</p>
+						</div>
+						<div class="col-sm-2 col-md-2 col-6">
+							<img th:src="@{../../images/m1_1.jpg}"
+								style="width: 200px; height: 200px" alt="Product 1"
+								class="img-fluid mb-3">
+							<p class="text-center">MLB</p>
+						</div>
+						<div class="col-sm-2 col-md-2 col-6">
+							<img th:src="@{../../images/puma1_1.jpg}"
+								style="width: 200px; height: 200px" alt="Product 1"
+								class="img-fluid mb-3">
+							<p class="text-center">Puma</p>
+							>
+						</div>
+						<div class="col-sm-2 col-md-2 col-6">
+							<img th:src="@{../../images/converse1_1.jpg}"
+								style="width: 200px; height: 200px" alt="Product 1"
+								class="img-fluid mb-3">
+							<p class="text-center">Converse</p>
+						</div>
+						<div class="col-sm-2 col-md-2 col-6">
+							<img th:src="@{../../images/van1_1.jpg}"
+								style="width: 200px; height: 200px" alt="Product 1"
+								class="img-fluid mb-3">
+							<p class="text-center">Vans</p>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row mt-5">
+				<div class="col-md-12" data-aos="fade">
+					<h2>Our Team</h2>
+					<div class="row mt-3">
+						<div class="col-sm-2 col-md-2 col-6">
+							<div class="card">
+								<img th:src="@{../../images/user.jpg}" alt="Product 1"
+									class="img-fluid mb-3">
+								<div class="card-body">
+									<p class="card-title">PHẠM TRUNG HIẾU</p>
+									<p class="card-text">Founder & CEO</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-2 col-md-2 col-6">
+							<div class="card">
+								<img th:src="@{../../images/user.jpg}" alt="Product 1"
+									class="img-fluid mb-3">
+								<div class="card-body">
+									<p class="card-title">HUỲNH ĐỨC HOÀN</p>
+									<p class="card-text">Head of Design</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-2 col-md-2 col-6">
+							<div class="card">
+								<img th:src="@{../../images/user.jpg}" alt="Product 1"
+									class="img-fluid mb-3">
+								<div class="card-body">
+									<p class="card-title">PHẠM ĐĂNG NGUYÊN</p>
+									<p class="card-text">Marketing Manager</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-2 col-md-2 col-6">
+							<div class="card">
+								<img th:src="@{../../images/user.jpg}" alt="Product 1"
+									class="img-fluid mb-3">
+								<div class="card-body">
+									<p class="card-title">BÙI XUÂN VIỆT</p>
+									<p class="card-text">Sales Representative</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-2 col-md-2 col-6">
+							<div class="card">
+								<img th:src="@{../../images/user.jpg}" alt="Product 1"
+									class="img-fluid mb-3">
+								<div class="card-body">
+									<p class="card-title">NGUYỄN THANH HẬU</p>
+									<p class="card-text">Customer Support</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-2 col-md-2 col-6">
+							<div class="card">
+								<img th:src="@{../../images/user.jpg}" alt="Product 1"
+									class="img-fluid mb-3">
+								<div class="card-body">
+									<p class="card-title">THANH VĂN</p>
+									<p class="card-text">Product Manager</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-5">
+				<div class="col-md-12 text-center">
+					<h2>Contact Us</h2>
+					<p>If you have any questions or inquiries, please feel free to
+						reach out to us. We're here to help!</p>
+					<p>123 Shoe Street, Galaxy City, ShoeLand</p>
+					<p>Email: info@shoegalaxy.com | Phone: 123-456-7890</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<div class="site-section site-section-sm site-blocks-1 border-0"
+		data-aos="fade">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4"
+					data-aos="fade-up" data-aos-delay="">
+					<div class="icon mr-4 align-self-start">
+						<span class="icon-truck"></span>
+					</div>
+					<div class="text">
+						<h2 class="text-uppercase">Free Shipping</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4"
+					data-aos="fade-up" data-aos-delay="100">
+					<div class="icon mr-4 align-self-start">
+						<span class="icon-refresh2"></span>
+					</div>
+					<div class="text">
+						<h2 class="text-uppercase">Free Returns</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4"
+					data-aos="fade-up" data-aos-delay="200">
+					<div class="icon mr-4 align-self-start">
+						<span class="icon-help"></span>
+					</div>
+					<div class="text">
+						<h2 class="text-uppercase">Customer Support</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

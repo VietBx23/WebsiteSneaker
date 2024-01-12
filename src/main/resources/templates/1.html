@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tải Ảnh Lên</title>
+</head>
+<body>
+
+    <h1>Tải Ảnh Lên</h1>
+
+    <form id="imageForm" enctype="multipart/form-data">
+        <input type="file" id="imageInput" multiple>
+        <button type="button" onclick="uploadImages()">Tải Ảnh Lên</button>
+    </form>
+
+    <div id="selectedImages"></div>
+
+    <script>
+        function uploadImages() {
+            var selectedImagesDiv = document.getElementById('selectedImages');
+            selectedImagesDiv.innerHTML = ''; // Xóa nội dung trước đó
+
+            var files = document.getElementById('imageInput').files;
+            var formData = new FormData();
+
+            for (var i = 0; i < files.length; i++) {
+                formData.append('images', files[i]);
+
+                var image = document.createElement('img');
+                image.src = URL.createObjectURL(files[i]);
+                image.style.width = '100px'; // Điều chỉnh kích thước ảnh nếu cần
+
+                selectedImagesDiv.appendChild(image);
+            }
+
+            // Simulate uploading to the server (In a real scenario, you would send this data to the server)
+            console.log("Images to be uploaded:", formData.getAll('images'));
+        }
+    </script>
+
+</body>
+</html>
