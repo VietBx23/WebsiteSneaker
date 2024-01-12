@@ -58,7 +58,8 @@
 
 
 
-<div class="container mt-5" data-aos="fade-up" th:if="${not #lists.isEmpty(discountProducts)}">
+	<div class="container mt-5" data-aos="fade-up"
+		th:if="${not #lists.isEmpty(discountProducts)}">
 		<div class="row">
 			<div class="col-12" th:if="${discountProducts != null }">
 				<h1 class="big-sale" th:text="#{body.bigsale}">BIG SALES</h1>
@@ -72,7 +73,6 @@
 					<div class="product-image-container">
 						<a th:href="@{|/shop-single.html/${discountProduct.product.id}|}">
 							<span th:if="${not #lists.isEmpty(images)}"> <span
-
 								th:each="pro : ${pro}"><span
 									th:if="${pro.id == discountProduct.product.id}"> <img
 										class="product-image-shoe img-fluid" style="height: auto;"
@@ -98,14 +98,14 @@
 			</div>
 		</div>
 	</div>
-	
-	
-	
-	
+
+
+
+
 	<div class="container mt-5 mb-3" data-aos="fade-up">
 		<div class="row">
 			<div class="col-12 ">
-				<h1 class="big-sale"  th:text="#{body.popular}">POPULAR SHOES</h1>
+				<h1 class="big-sale" th:text="#{body.popular}">POPULAR SHOES</h1>
 			</div>
 			<div class="col-md-3 col-6 col-sm-6"
 				th:each="pro, iterStart : ${pro}"
@@ -173,53 +173,51 @@
 				<h1 class="big-sale" th:text="#{body.product}">NEW PRODUCTS</h1>
 			</div>
 			<!-- Create a utility variable to store the chunk size -->
-</div>
-			<div id="carouselControls" class="carousel slide"
-				data-ride="carousel">
-				<div class="carousel-inner">
-					<div th:each="item,iterStat: ${newProduct}"
-						th:classappend="${iterStat.first} ? 'carousel-item active' : 'carousel-item'">
-						<div class="row">
-							<div th:each="pro: ${item}" th:if="${pro.category.available}"
-								class="col-md-3">
-								<div class="product-card-shoe">
-									<div class="product-image-container">
-										<a th:href="@{|/shop-single.html/${pro.id}|}"> <img
-											class="product-image-shoe"
-											th:src="@{|/images/${pro.images[0].image}|}"
-											th:alt="${pro.name}">
-										</a>
-										<div class="discount-badge-shoe"
-											th:if="${pro.discountProduct != null and not #lists.isEmpty(pro.discountProduct) and
+		</div>
+		<div id="carouselControls" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div th:each="item,iterStat: ${newProduct}"
+					th:classappend="${iterStat.first} ? 'carousel-item active' : 'carousel-item'">
+					<div class="row">
+						<div th:each="pro: ${item}" th:if="${pro.category.available}"
+							class="col-md-3">
+							<div class="product-card-shoe">
+								<div class="product-image-container">
+									<a th:href="@{|/shop-single.html/${pro.id}|}"> <img
+										class="product-image-shoe"
+										th:src="@{|/images/${pro.images[0].image}|}"
+										th:alt="${pro.name}">
+									</a>
+									<div class="discount-badge-shoe"
+										th:if="${pro.discountProduct != null and not #lists.isEmpty(pro.discountProduct) and
                       (T(java.time.LocalDate).now().isAfter(pro.discountProduct[0].start_Date) and 
                       (T(java.time.LocalDate).now().isBefore(pro.discountProduct[0].end_Date) or 
                       T(java.time.LocalDate).now().isEqual(pro.discountProduct[0].end_Date)))} and ${pro.discountProduct[0].active}">
-											<span th:text="${pro.discountProduct[0].percentage + '%'}"></span>
-										</div>
+										<span th:text="${pro.discountProduct[0].percentage + '%'}"></span>
 									</div>
-									<div class="product-details-shoe">
-										<div class="product-title-shoe text-truncate"
-											th:text="${pro.name}"></div>
-										<div
-											th:if="${pro.discountProduct != null and not #lists.isEmpty(pro.discountProduct) and
+								</div>
+								<div class="product-details-shoe">
+									<div class="product-title-shoe text-truncate"
+										th:text="${pro.name}"></div>
+									<div
+										th:if="${pro.discountProduct != null and not #lists.isEmpty(pro.discountProduct) and
                           pro.discountProduct[0].active and 
                           (T(java.time.LocalDate).now().isAfter(pro.discountProduct[0].start_Date) and 
                           (T(java.time.LocalDate).now().isBefore(pro.discountProduct[0].end_Date) or 
                           T(java.time.LocalDate).now().isEqual(pro.discountProduct[0].end_Date)))} and ${pro.discountProduct[0].active}">
-											<span class="product-price-shoe"
-												th:text="${'$' + (pro.price - (pro.price * pro.discountProduct[0].percentage / 100))}"></span>
-											<del class="original-price-shoe" th:text="${'$' + pro.price}"></del>
-										</div>
-										<div
-											th:if="${pro.discountProduct != null and not #lists.isEmpty(pro.discountProduct) and
+										<span class="product-price-shoe"
+											th:text="${'$' + (pro.price - (pro.price * pro.discountProduct[0].percentage / 100))}"></span>
+										<del class="original-price-shoe" th:text="${'$' + pro.price}"></del>
+									</div>
+									<div
+										th:if="${pro.discountProduct != null and not #lists.isEmpty(pro.discountProduct) and
                           (T(java.time.LocalDate).now().isBefore(pro.discountProduct[0].start_Date) or 
                           T(java.time.LocalDate).now().isAfter(pro.discountProduct[0].end_Date))} and ${pro.discountProduct[0].active}">
-											<span class="product-price-shoe" th:text="${'$' + pro.price}"></span>
-										</div>
-										<div
-											th:unless="${pro.discountProduct != null and not #lists.isEmpty(pro.discountProduct) and pro.discountProduct[0].active}">
-											<span class="product-price-shoe" th:text="${'$' + pro.price}"></span>
-										</div>
+										<span class="product-price-shoe" th:text="${'$' + pro.price}"></span>
+									</div>
+									<div
+										th:unless="${pro.discountProduct != null and not #lists.isEmpty(pro.discountProduct) and pro.discountProduct[0].active}">
+										<span class="product-price-shoe" th:text="${'$' + pro.price}"></span>
 									</div>
 								</div>
 							</div>
@@ -227,19 +225,20 @@
 					</div>
 				</div>
 			</div>
-			<button class="carousel-control-prev" type="button"
-				data-target="#carouselControls" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</button>
+		</div>
+		<button class="carousel-control-prev" type="button"
+			data-target="#carouselControls" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+				class="sr-only">Previous</span>
+		</button>
 
-			<!-- Nút Next -->
-			<button class="carousel-control-next" type="button"
-				data-target="#carouselControls" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</button>
-		
+		<!-- Nút Next -->
+		<button class="carousel-control-next" type="button"
+			data-target="#carouselControls" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span> <span
+				class="sr-only">Next</span>
+		</button>
+
 
 	</div>
 
@@ -382,8 +381,11 @@
 					</div>
 					<div class="text">
 
-						<h2 class="text-uppercase" th:text="#{footer.freeshipping}">Free Shipping</h2>
-						<p th:text="#{footer.freeshipping1}">When you place an order and meet the applicable conditions, free shipping will be automatically applied during the checkout process.</p>
+						<h2 class="text-uppercase" th:text="#{footer.freeshipping}">Free
+							Shipping</h2>
+						<p th:text="#{footer.freeshipping1}">When you place an order
+							and meet the applicable conditions, free shipping will be
+							automatically applied during the checkout process.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4"
@@ -392,8 +394,11 @@
 						<span class="icon-refresh2"></span>
 					</div>
 					<div class="text">
-						<h2 class="text-uppercase"th:text="#{footer.freereturns}">Free Returns</h2>
-						<p th:text="#{footer.freereturns1}">We are committed to ensuring the satisfaction of our customers with our free return policy.</p>
+						<h2 class="text-uppercase" th:text="#{footer.freereturns}">Free
+							Returns</h2>
+						<p th:text="#{footer.freereturns1}">We are committed to
+							ensuring the satisfaction of our customers with our free return
+							policy.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4"
@@ -403,8 +408,11 @@
 					</div>
 					<div class="text">
 
-						<h2 class="text-uppercase" th:text="#{footer.custsup}">Customer Support</h2>
-						<p th:text="#{footer.custsup1}">We are committed to providing professional customer support services to ensure that your shopping experience is smooth and comfortable.</p>
+						<h2 class="text-uppercase" th:text="#{footer.custsup}">Customer
+							Support</h2>
+						<p th:text="#{footer.custsup1}">We are committed to providing
+							professional customer support services to ensure that your
+							shopping experience is smooth and comfortable.</p>
 					</div>
 				</div>
 			</div>

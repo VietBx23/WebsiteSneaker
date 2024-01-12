@@ -98,9 +98,6 @@ public class LoadPage {
 		  // Truy vấn danh sách hãng và số lượng sản phẩm tương ứng
 	    List<Object[]> results = productDAO.countProductsByCategory();
 	    model.addAttribute("results", results);
-	
-		
-
 		return "index";
 	}
 	private <T> List<List<T>> chunkList(List<T> list, int chunkSize) {
