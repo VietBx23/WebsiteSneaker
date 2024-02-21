@@ -58,58 +58,58 @@ This project is a sneakers e-commerce website developed using Java Spring Boot, 
 Below are pictures of the project.
 
 ## Client
-![ interface login](image-1.png)
+![ interface login](Image/image-1.png)
 
-![Alt text](image-3.png)
+![Alt text](Image/image-3.png)
 
-![Alt text](image-2.png)
+![Alt text](Image/image-2.png)
 
-![Alt text](image-4.png)
+![Alt text](Image/image-4.png)
 
-![Alt text](image-5.png)
+![Alt text](Image/image-5.png)
 
-![Alt text](image-6.png)
+![Alt text](Image/image-6.png)
 
-![Alt text](image-7.png)
+![Alt text](Image/image-7.png)
 
-![Alt text](image-8.png)
+![Alt text](Image/image-8.png)
 
-![Alt text](image-9.png)
+![Alt text](Image/image-9.png)
 
-![Alt text](image-10.png)
+![Alt text](Image/image-10.png)
 
-![Alt text](image-11.png)
+![Alt text](Image/image-11.png)
 
-![Alt text](image-12.png)
+![Alt text](Image/image-12.png)
 
-![Alt text](image-13.png)
+![Alt text](Image/image-13.png)
 
-![Alt text](image-14.png)
+![Alt text](Image/image-14.png)
 
-![Alt text](image-15.png)
+![Alt text](Image/image-15.png)
 
 ## Admin
 
-![Alt text](image-16.png)
+![Alt text](Image/image-16.png)
 
-![Alt text](image-17.png)
+![Alt text](Image/image-17.png)
 
-![Alt text](image-18.png)
+![Alt text](Image/image-18.png)
 
-![Alt text](image-19.png)
+![Alt text](Image/image-19.png)
 
-![Alt text](image-20.png)
+![Alt text](Image/image-20.png)
 
-![Alt text](image-21.png)
+![Alt text](Image/image-21.png)
 
-![Alt text](image-22.png)
+![Alt text](Image/image-22.png)
 
-![Alt text](image-23.png)
+![Alt text](Image/image-23.png)
 
-![Alt text](image-24.png)
+![Alt text](Image/image-24.png)
 
-![Alt text](image-25.png)
+![Alt text](Image/image-25.png)
 
-![Alt text](image-26.png)
+![Alt text](Image/image-26.png)
 
-![Alt text](image-27.png)
+![Alt text](Image/image-27.png)
