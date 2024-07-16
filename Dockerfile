@@ -1,16 +1,22 @@
-FROM maven:3-openjdk-11 AS build
+# Sử dụng Maven làm hình ảnh cơ sở
+FROM maven:3.8.4-openjdk-17 AS build
+
+# Đặt thư mục làm việc
 WORKDIR /app
 
-COPY . .
-RUN mvn clean package -DskipTests
+# Sao chép file pom.xml và mã nguồn vào container
+COPY pom.xml .
+COPY src ./src
 
+# Đóng gói ứng dụng Spring Boot thành file JAR
+RUN mvn package -DskipTests
 
-# Run stage
-
-FROM openjdk:11-jdk-slim
+# Tạo hình ảnh runtime
+FROM openjdk:17-jdk-slim
 WORKDIR /app
 
-COPY --from=build /app/target/DrComputer-0.0.1-SNAPSHOT.war drcomputer.war
-EXPOSE 8080 
+# Sao chép file JAR từ hình ảnh build vào hình ảnh runtime
+COPY --from=build /app/target/websiteSneaker-0.0.1-SNAPSHOT.jar .
 
-ENTRYPOINT ["java","-jar","drcomputer.war"]
+# Chạy ứng dụng khi container khởi động
+CMD ["java", "-jar", "websiteSneaker-0.0.1-SNAPSHOT.jar"]
