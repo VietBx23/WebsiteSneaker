@@ -14,8 +14,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import lombok.val;
-import lombok.experimental.var;
-
 @Service
 public class ParamService {
 	@Autowired
