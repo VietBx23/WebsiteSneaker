@@ -21,11 +21,6 @@
 
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.32</version> <!-- Hoặc phiên bản mới nhất -->
-		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
